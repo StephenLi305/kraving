@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import './business_show.css';
 import { yelpBiz, yelpReviews, clearReviews } from '../../util/yelp_api_util.js';
 import { getZomatoReviews } from '../../util/zomato_api_util.js';
-import HeaderContainer from '../header/header_container';
 import './review.css'
 
 const mapStateToProps = (state, ownProps) => {
@@ -28,7 +27,6 @@ const mapDispatchToProps = dispatch => {
     getYelpReviews: (id) => dispatch(yelpReviews(id)),
     getZomatoReviews: (searchInfo) => dispatch(getZomatoReviews(searchInfo)),
     clearReviews: () => dispatch(clearReviews())
-
   })
 }
 

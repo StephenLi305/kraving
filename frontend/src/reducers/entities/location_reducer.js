@@ -2,7 +2,7 @@ import {
   SET_LOCATION,
 } from '../../util/yelp_api_util';
 
-const locationReducer = (state = 'San Franciso', action) => {
+const locationReducer = (state = 'San Jose', action) => {
   Object.freeze(state);
   switch(action.type) {
     case SET_LOCATION:
