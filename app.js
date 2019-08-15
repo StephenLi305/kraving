@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
+// const db = "tempkey"
 const db = require('./config/keys').mongoURI;
 const users = require('./routes/api/users');
 const yelp = require('./routes/api/yelp');
@@ -9,7 +10,7 @@ const google = require('./routes/api/google');
 const zomato = require('./routes/api/zomato');
 const passport = require('passport');
 const path = require('path');
-require('./config/passport')(passport);
+// require('./config/passport')(passport);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('frontend/build'));
@@ -20,6 +21,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 mongoose
+  // .connect()
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
