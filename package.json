@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tianyou-Song/kraving.git"
+    "url": "git+https://github.com/StephenLi305/kraving.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tianyou-Song/kraving/issues"
+    "url": "https://github.com/StephenLi305/kraving/issues"
   },
-  "homepage": "https://github.com/Tianyou-Song/kraving#readme",
+  "homepage": "https://github.com/StephenLi305/kraving#readme",
   "dependencies": {
     "axios": "^0.18.1",
     "bcrypt": "^3.0.2",
