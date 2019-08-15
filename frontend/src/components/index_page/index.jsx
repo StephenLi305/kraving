@@ -30,11 +30,11 @@ class IndexPage extends React.Component {
     return (
       <div className="business-card-categories">
       {biz.categories.map((category, idx) => {
-        {if (idx != biz.categories.length - 1) {
+        if (idx !== biz.categories.length - 1) {
           return `${category.title} · `
         } else {
           return `${category.title}`
-        }}
+        }
       })}
       </div>
     )
@@ -60,11 +60,11 @@ class IndexPage extends React.Component {
         this.bizCategories(business)
             return(
               <div className="business-card-container-column" key={business.id}>
-                <Link to={`/${business.id}`}><div className="business-card-image"><img src={business.image_url}/></div></Link>
+                <Link to={`/${business.id}`}><div className="business-card-image"><img src={business.image_url} alt="business card"/></div></Link>
                 <div className="business-card-name">{business.name}</div>
                 {this.bizCategories(business)}
                 <div className="business-card-rating">
-                  <img src={`/images/stars/${business.rating}.png`}></img>
+                  <img src={`/images/stars/${business.rating}.png`} alt="star"></img>
                   <span>({business.review_count})</span>
                 </div>
               </div>

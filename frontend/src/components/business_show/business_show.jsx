@@ -96,7 +96,7 @@ class BusinessShow extends React.Component {
         >
           <div className="business-show-detail-container">
           <div className="business-show-name"><a href={this.props.business.url}>{this.props.business.name}</a></div>
-          <div className="business-show-detail">📍{this.props.business.location.address1}, {this.props.business.location.city} </div>
+          <div className="business-show-detail"><span>📍</span>{this.props.business.location.address1}, {this.props.business.location.city} </div>
           <div className="business-show-detail">{this.props.business.price} · {this.props.business.categories[0].title} · ⭐{this.props.business.rating}</div>
           </div>
         </div>
@@ -114,10 +114,10 @@ class BusinessShow extends React.Component {
 
             return(
               <div className="review-card-container" key={review.id}>
-                <div className="review-card-image"><img src={review.user.image_url}/></div>
+                <div className="review-card-image"><img src={review.user.image_url} alt="review user"/></div>
                 <div className="review-card-detail">
                   <div className="review-card-name">{review.user.name}</div>
-                  <div className="review-card-rating"><img src={`/images/stars/${review.rating}.png`}></img></div>
+                  <div className="review-card-rating"><img src={`/images/stars/${review.rating}.png`} alt="review stars"></img></div>
                   <div className="review-card-text"><a href={review.url}>{review.text}</a></div>
                 </div>
               </div>
@@ -129,10 +129,10 @@ class BusinessShow extends React.Component {
 
             return(
               <div className="review-card-container" key={review.review.id}>
-                <div className="review-card-image"><img src={review.review.user.profile_image}/></div>
+                <div className="review-card-image"><img src={review.review.user.profile_image} alt="review profile"/></div>
                 <div className="review-card-detail">
                   <div className="review-card-name">{review.review.user.name}</div>
-                  <div className="review-card-rating"><img src={`/images/stars/${review.review.rating}.png`}></img></div>
+                  <div className="review-card-rating"><img src={`/images/stars/${review.review.rating}.png`} alt="review star"></img></div>
                   <div className="review-card-text"><a href={review.review.user.profile_url}>{review.review.review_text}</a></div>
                 </div>
               </div>

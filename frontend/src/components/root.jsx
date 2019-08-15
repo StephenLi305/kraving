@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import {
   AuthRoute,
-  ProtectedRoute
+  // ProtectedRoute
 } from '../util/routes_api_util';
 
 import SignUpFormContainer from './session_form/signup_form_container';
